@@ -1,4 +1,4 @@
-package GerenciadorAnimesHentai;
+package GerenciadorAnimes;
 
 import java.util.ArrayList;
 import java.util.List;
