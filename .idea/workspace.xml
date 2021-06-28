@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="96f23f16-9916-4b04-b16c-9c04d221fc80" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoFinal-UFPB/GerenciadorAnimes/AnimesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoFinal-UFPB/GerenciadorAnimes/AnimesRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoFinal-UFPB/GerenciadorAnimes/GerenciadorAnimes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoFinal-UFPB/GerenciadorAnimes/GerenciadorAnimes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoFinal-UFPB/GerenciadorAnimes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoFinal-UFPB/GerenciadorAnimes/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GerenciadorAnimes/AnimesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GerenciadorAnimes/AnimesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GerenciadorAnimes/ErroRemover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GerenciadorAnimes/ErroRemover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GerenciadorAnimes/ErroRemover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GerenciadorAnimes/AnimeNEncontrado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GerenciadorAnimes/GerenciadorAnimes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GerenciadorAnimes/GerenciadorAnimes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GerenciadorAnimes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GerenciadorAnimes/Main.java" afterDir="false" />
     </list>
@@ -77,7 +80,7 @@
       <workItem from="1624753910572" duration="5000" />
       <workItem from="1624754029165" duration="1198000" />
       <workItem from="1624849985553" duration="377000" />
-      <workItem from="1624920389358" duration="1380000" />
+      <workItem from="1624920389358" duration="3033000" />
     </task>
     <servers />
   </component>

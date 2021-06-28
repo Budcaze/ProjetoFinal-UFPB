@@ -124,7 +124,12 @@ public class Main {
                 case 4:
                     System.out.println("Digite o gênero do anime que você quer procurar: ");
                     String genero_anime = input.nextLine();
-                    System.out.println(gerenciadorAnimes.animesGenero(genero_anime));
+                    try{
+                        System.out.println(gerenciadorAnimes.animesGenero(genero_anime));
+                    }catch (Exception e){
+                        System.err.println(e.getMessage());
+                    }
+
                     break;
                 case 5:
                     System.out.println("Esses são os animes com menos de 20 episódios: "+gerenciadorAnimes.animesMenos20episodios());
@@ -138,6 +143,26 @@ public class Main {
             System.out.println("Digite uma nova opção: ");
              opcao = Integer.parseInt(input.nextLine());
         }
+        System.out.println("╔═╗╔═╗░░░░╔╗░░░░╔═══╦╗░░░░░░░░░░░░╔╗░░╔╗\n" +
+                "║║╚╝║║░░░╔╝╚╗░░░║╔═╗║║░░░░░░░░░░░░║║░░║║\n" +
+                "║╔╗╔╗╠╗╔╦╬╗╔╬══╗║║░║║╚═╦═╦╦══╦══╦═╝╠══╣║\n" +
+                "║║║║║║║║╠╣║║║╔╗║║║░║║╔╗║╔╬╣╔╗║╔╗║╔╗║╔╗╠╝\n" +
+                "║║║║║║╚╝║║║╚╣╚╝║║╚═╝║╚╝║║║║╚╝║╔╗║╚╝║╚╝╠╗\n" +
+                "╚╝╚╝╚╩══╩╝╚═╩══╝╚═══╩══╩╝╚╩═╗╠╝╚╩══╩══╩╝\n" +
+                "░░░░░░░░░░░░░░░░░░░░░░░░░░╔═╝║░░░░░░░░░░\n" +
+                "░░░░░░░░░░░░░░░░░░░░░░░░░░╚══╝░░░░░░░░░░\n");
+        System.out.println("⠄⠄⠄⣾⣿⠿⠿⠶⠿⢿⣿⣿⣿⣿⣦⣤⣄⢀⡅⢠⣾⣛⡉⠄⠄⠄⠸⢀⣿\n" +
+                "⠄⠄⢀⡋⣡⣴⣶⣶⡀⠄⠄⠙⢿⣿⣿⣿⣿⣿⣴⣿⣿⣿⢃⣤⣄⣀⣥⣿⣿\n" +
+                "⠄⠄⢸⣇⠻⣿⣿⣿⣧⣀⢀⣠⡌⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠿⣿⣿⣿\n" +
+                "⠄⢀⢸⣿⣷⣤⣤⣤⣬⣙⣛⢿⣿⣿⣿⣿⣿⣿⡿⣿⣿⡍⠄⠄⢀⣤⣄⠉⠋\n" +
+                "⠄⣼⣖⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⢇⣿⣿⡷⠶⠶⢿⣿⣿⠇⢀\n" +
+                "⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣽⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣷⣶⣥⣴⣿\n" +
+                "⢀⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟\n" +
+                "⢸⣿⣦⣌⣛⣻⣿⣿⣧⠙⠛⠛⡭⠅⠒⠦⠭⣭⡻⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃\n" +
+                "⠘⣿⣿⣿⣿⣿⣿⣿⣿⡆⠄⠄⠄⠄⠄⠄⠄⠄⠹⠈⢋⣽⣿⣿⣿⣿⣵⣾⠃\n" +
+                "⠄⠘⣿⣿⣿⣿⣿⣿⣿⣿⠄⣴⣿⣶⣄⠄⣴⣶⠄⢀⣾⣿⣿⣿⣿⣿⣿⠃⠄\n" +
+                "⠄⠄⠈⠻⣿⣿⣿⣿⣿⣿⡄⢻⣿⣿⣿⠄⣿⣿⡀⣾⣿⣿⣿⣿⣛⠛⠁⠄⠄");
+       
 //        Animes animes2 = new Animes("Balala", "Hentai", 18, 10);
 //        Animes animes = new Animes("Boku no pico", "Hentai", 18, 3);
 //        Animes animes2 = new Animes("Pokemon", "Acao", 10, 800);

@@ -5,6 +5,7 @@ import java.util.List;
 
 public class GerenciadorAnimes implements AnimesRepository {
     private List<Animes> animes;
+   private String mensagem = "Anime não Encontrado!";
 
     public GerenciadorAnimes (){
         this.animes = new ArrayList<>();
@@ -37,12 +38,15 @@ public class GerenciadorAnimes implements AnimesRepository {
     }
 
     @Override
-    public List<String> animesGenero(String generoAnime) {
+    public List<String> animesGenero(String generoAnime) throws AnimeNEncontrado {
         List<String> animesgenero = new ArrayList<>();
         for(Animes a : animes){
             if(a.getGenero().equalsIgnoreCase(generoAnime)){
                 animesgenero.add(a.getNome());
             }
+        }
+        if(animesgenero.size() == 0){
+            throw new AnimeNEncontrado(mensagem);
         }
         return animesgenero;
     }
@@ -60,24 +64,24 @@ public class GerenciadorAnimes implements AnimesRepository {
     }
 
     @Override
-    public boolean removerAnime(String nomeAnime) throws ErroRemover {
+    public boolean removerAnime(String nomeAnime) throws AnimeNEncontrado {
         for(Animes a : animes){
             if(a.getNome().equalsIgnoreCase(nomeAnime)){
                 animes.remove(a);
                 return true;
             }
         }
-        throw new ErroRemover("Anime não encontrado");
+        throw new AnimeNEncontrado(mensagem);
     }
 
     @Override
-    public String pesquisarAnime(String nomeAnime) throws ErroRemover {
+    public String pesquisarAnime(String nomeAnime) throws AnimeNEncontrado {
         for(Animes a : animes){
             if(a.getNome().equalsIgnoreCase(nomeAnime)){
                 return a.toString();
             }
         }
-        throw new ErroRemover("Anime não encontrado");
+        throw new AnimeNEncontrado(mensagem);
     }
 
     @Override
