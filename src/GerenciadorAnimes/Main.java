@@ -129,7 +129,6 @@ public class Main {
                     }catch (Exception e){
                         System.err.println(e.getMessage());
                     }
-
                     break;
                 case 5:
                     System.out.println("Esses são os animes com menos de 20 episódios: "+gerenciadorAnimes.animesMenos20episodios());
@@ -162,7 +161,7 @@ public class Main {
                 "⠘⣿⣿⣿⣿⣿⣿⣿⣿⡆⠄⠄⠄⠄⠄⠄⠄⠄⠹⠈⢋⣽⣿⣿⣿⣿⣵⣾⠃\n" +
                 "⠄⠘⣿⣿⣿⣿⣿⣿⣿⣿⠄⣴⣿⣶⣄⠄⣴⣶⠄⢀⣾⣿⣿⣿⣿⣿⣿⠃⠄\n" +
                 "⠄⠄⠈⠻⣿⣿⣿⣿⣿⣿⡄⢻⣿⣿⣿⠄⣿⣿⡀⣾⣿⣿⣿⣿⣛⠛⠁⠄⠄");
-       
+
 //        Animes animes2 = new Animes("Balala", "Hentai", 18, 10);
 //        Animes animes = new Animes("Boku no pico", "Hentai", 18, 3);
 //        Animes animes2 = new Animes("Pokemon", "Acao", 10, 800);
