@@ -60,24 +60,24 @@ public class GerenciadorAnimes implements AnimesRepository {
     }
 
     @Override
-    public boolean removerAnime(String nomeAnime) {
+    public boolean removerAnime(String nomeAnime) throws ErroRemover {
         for(Animes a : animes){
             if(a.getNome().equalsIgnoreCase(nomeAnime)){
                 animes.remove(a);
                 return true;
             }
         }
-        return false;
+        throw new ErroRemover("Anime não encontrado");
     }
 
     @Override
-    public String pesquisarAnime(String nomeAnime) {
+    public String pesquisarAnime(String nomeAnime) throws ErroRemover {
         for(Animes a : animes){
             if(a.getNome().equalsIgnoreCase(nomeAnime)){
                 return a.toString();
             }
         }
-        return "Exception";
+        throw new ErroRemover("Anime não encontrado");
     }
 
     @Override

@@ -100,13 +100,23 @@ public class Main {
                 case 1:
                     System.out.println("Quer remover qual anime: ");
                     String nome_do_anime_remover = input.nextLine();
-                    gerenciadorAnimes.removerAnime(nome_do_anime_remover);
-                    System.out.println("Anime removido!");
+                    try {
+                        gerenciadorAnimes.removerAnime(nome_do_anime_remover);
+                        System.out.println("Anime removido!");
+                    } catch (Exception e) {
+                        System.err.println(e.getMessage());
+                    }
+
                     break;
                 case 2:
                     System.out.println("Digite o nome do anime que você quer procurar: ");
                     String nome_do_anime = input.nextLine();
-                    System.out.println(gerenciadorAnimes.pesquisarAnime(nome_do_anime));
+                    try{
+                        System.out.println(gerenciadorAnimes.pesquisarAnime(nome_do_anime));
+                    } catch (Exception e){
+                        System.err.println(e.getMessage());
+                    }
+
                     break;
                 case 3:
                     System.out.println("Esses são os animes para maiores de 18 anos: "+gerenciadorAnimes.animesMaior18());

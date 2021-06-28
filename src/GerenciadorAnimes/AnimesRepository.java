@@ -7,7 +7,7 @@ public interface AnimesRepository {
     List<String> animesMenos20episodios();
     List<String> animesGenero(String generoAnime);
     List<String> animesMaior18();
-    boolean removerAnime(String nomeAnime);
-    String pesquisarAnime(String nomeAnime);
+    boolean removerAnime(String nomeAnime) throws ErroRemover;
+    String pesquisarAnime(String nomeAnime) throws ErroRemover;
     List<Animes> TodosAnimes();
 }
