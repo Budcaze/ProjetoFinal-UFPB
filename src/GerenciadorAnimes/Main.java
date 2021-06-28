@@ -1,5 +1,6 @@
 package GerenciadorAnimes;
 
+import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -97,7 +98,10 @@ public class Main {
                     gerenciadorAnimes.adicionarAnimes(animes);
                     break;
                 case 1:
-                    System.out.println("Em Processamento");
+                    System.out.println("Quer remover qual anime: ");
+                    String nome_do_anime_remover = input.nextLine();
+                    gerenciadorAnimes.removerAnime(nome_do_anime_remover);
+                    System.out.println("Anime removido!");
                     break;
                 case 2:
                     System.out.println("Digite o nome do anime que você quer procurar: ");
@@ -125,12 +129,11 @@ public class Main {
              opcao = Integer.parseInt(input.nextLine());
         }
 //        Animes animes2 = new Animes("Balala", "Hentai", 18, 10);
-
+//        Animes animes = new Animes("Boku no pico", "Hentai", 18, 3);
+//        Animes animes2 = new Animes("Pokemon", "Acao", 10, 800);
 //        gerenciadorAnimes.adicionarAnimes(animes);
 //        gerenciadorAnimes.adicionarAnimes(animes2);
-//        System.out.println("Animes para maiores de idade: " + gerenciadorAnimes.animesMaior18());
-//        System.out.println("Animes com menos de 20 ep: " + gerenciadorAnimes.animesMenos20episodios());
-//        System.out.println(gerenciadorAnimes.pesquisarAnime("BOku no pico"));
-//        System.out.println(gerenciadorAnimes.animesGenero("Hentai"));
+//        System.out.println(gerenciadorAnimes.removerAnime("Boku no pico"));
+//        System.out.println(gerenciadorAnimes.TodosAnimes());
     }
 }

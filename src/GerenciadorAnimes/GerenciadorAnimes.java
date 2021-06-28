@@ -63,7 +63,7 @@ public class GerenciadorAnimes implements AnimesRepository {
     public boolean removerAnime(String nomeAnime) {
         for(Animes a : animes){
             if(a.getNome().equalsIgnoreCase(nomeAnime)){
-                animes.remove(nomeAnime);
+                animes.remove(a);
                 return true;
             }
         }
