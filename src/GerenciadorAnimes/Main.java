@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         GerenciadorAnimes gerenciadorAnimes = new GerenciadorAnimes();
         Scanner input = new Scanner(System.in);
-        
+
         System.out.println("╔══╗░░░░░░░╔╗░░╔╗░░░░░╔╗░░╔╗\n" +
                 "║╔╗║░░░░░░░║╚╗╔╝║░░░░░║║░░║║\n" +
                 "║╚╝╚╦══╦╗╔╗╚╗║║╔╬╦═╗╔═╝╠══╣║\n" +
