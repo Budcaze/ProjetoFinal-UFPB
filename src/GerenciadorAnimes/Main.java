@@ -1,13 +1,16 @@
 package GerenciadorAnimes;
 
 import javax.sound.midi.Soundbank;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         GerenciadorAnimes gerenciadorAnimes = new GerenciadorAnimes();
         Scanner input = new Scanner(System.in);
+        List<String> recuperar =  new ArrayList<>(gerenciadorAnimes.retornar("Animes.txt"));
         System.out.println("╔══╗░░░░░░░╔╗░░╔╗░░░░░╔╗░░╔╗\n" +
                 "║╔╗║░░░░░░░║╚╗╔╝║░░░░░║║░░║║\n" +
                 "║╚╝╚╦══╦╗╔╗╚╗║║╔╬╦═╗╔═╝╠══╣║\n" +
@@ -81,7 +84,8 @@ public class Main {
                 "[6] Para listar todos os animes cadastrados\n" +
                 "[7] Para sair do programa\n" +
                 "Digite sua opção: ");
-        gerenciadorAnimes.retornar();
+
+        System.out.println(recuperar.toString().split(","));
         Integer opcao = Integer.parseInt(input.nextLine());
         while (opcao != 7) {
             switch (opcao) {

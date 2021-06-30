@@ -98,7 +98,11 @@ public class GerenciadorAnimes implements AnimesRepository {
         try{
             FileWriter fw = new FileWriter("Animes.txt");
             PrintWriter pw = new PrintWriter(fw);
-            pw.println(animes);
+            for(Animes a : animes){
+                pw.println(a.getNome() + "," + a.getGenero()  + "," +
+                a.getClassificacao_etaria() + "," + a.getQtd_episodios());
+            }
+
             pw.flush();
             pw.close();
             fw.close();
@@ -109,25 +113,29 @@ public class GerenciadorAnimes implements AnimesRepository {
     }
 
     @Override
-    public List<String> retornar() {
-        try {
-            FileReader fr = new FileReader("Animes.txt");
-            BufferedReader bf = new BufferedReader(fr);
-            while(true){
-                String linha = bf.readLine();
-                animesTexto.add(linha);
-                if(linha == null){
-                    break;
-                }
-                fr.close();
-                bf.close();
-                return animesTexto;
-            }
+    public List<String> retornar(String nomeArquivo) throws IOException {
+            List<String> linhasLidas = new ArrayList<>();
+            BufferedReader leitor = null;
+            try {
+                leitor = new BufferedReader(new FileReader(nomeArquivo));
+                String linha = null;
+                do {
+                    linha = leitor.readLine();
+                    if (linha!=null) {
+                        linhasLidas.add(linha);
+                    }
+                } while(linha!=null);
 
-        }catch (IOException e){
-            e.getMessage();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                if (leitor != null) {
+                    leitor.close();
+                }
+            }
+            return linhasLidas;
         }
-        return null;
-    }
 
 }

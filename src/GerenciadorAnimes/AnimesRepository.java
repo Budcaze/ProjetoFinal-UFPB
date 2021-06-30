@@ -1,5 +1,6 @@
 package GerenciadorAnimes;
 
+import java.io.IOException;
 import java.util.List;
 
 public interface AnimesRepository {
@@ -11,5 +12,5 @@ public interface AnimesRepository {
     String pesquisarAnime(String nomeAnime) throws AnimeNEncontradoException;
     List<Animes> TodosAnimes() throws ListaVaziaException;
     String salvar();
-    List<String> retornar();
+    List<String> retornar(String nomeArquivo) throws IOException;
 }
