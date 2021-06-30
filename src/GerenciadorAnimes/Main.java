@@ -149,9 +149,10 @@ public class Main {
                     System.err.println("Não tem essa opção");
                     break;
             }
+            gerenciadorAnimes.salvar();
             System.out.println("Digite uma nova opção: ");
              opcao = Integer.parseInt(input.nextLine());
-             gerenciadorAnimes.salvar();
+
         }
         System.out.println("╔═╗╔═╗░░░░╔╗░░░░╔═══╦╗░░░░░░░░░░░░╔╗░░╔╗\n" +
                 "║║╚╝║║░░░╔╝╚╗░░░║╔═╗║║░░░░░░░░░░░░║║░░║║\n" +

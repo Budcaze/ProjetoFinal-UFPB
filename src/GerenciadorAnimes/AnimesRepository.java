@@ -10,4 +10,5 @@ public interface AnimesRepository {
     boolean removerAnime(String nomeAnime) throws AnimeNEncontradoException;
     String pesquisarAnime(String nomeAnime) throws AnimeNEncontradoException;
     List<Animes> TodosAnimes() throws ListaVaziaException;
+    String salvar();
 }

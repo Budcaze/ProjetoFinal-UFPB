@@ -94,7 +94,7 @@ public class GerenciadorAnimes implements AnimesRepository {
         }
         return animes;
     }
-
+    @Override
     public String salvar(){
         try{
             FileWriter fw = new FileWriter("Animes.txt");

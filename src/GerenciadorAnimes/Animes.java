@@ -62,7 +62,7 @@ public class Animes {
 
     @Override
     public String toString() {
-        return "Animes -> \n" +
+        return "\nAnimes -> \n" +
                 "Nome: " + nome+"\nGênero: " + genero +
                 "\nClassificação Etária: " +
                 classificacao_etaria +

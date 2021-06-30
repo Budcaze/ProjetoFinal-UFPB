@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96f23f16-9916-4b04-b16c-9c04d221fc80" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/GerenciadorAnimes/ListaVaziaException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GerenciadorAnimes/AnimesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GerenciadorAnimes/AnimesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GerenciadorAnimes/GerenciadorAnimes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GerenciadorAnimes/GerenciadorAnimes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Animes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Animes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GerenciadorAnimes/Animes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GerenciadorAnimes/Animes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GerenciadorAnimes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GerenciadorAnimes/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +82,7 @@
       <workItem from="1624936768147" duration="889000" />
       <workItem from="1624974277639" duration="6144000" />
       <workItem from="1625018508756" duration="1371000" />
-      <workItem from="1625085787225" duration="1806000" />
+      <workItem from="1625085787225" duration="2247000" />
     </task>
     <servers />
   </component>
