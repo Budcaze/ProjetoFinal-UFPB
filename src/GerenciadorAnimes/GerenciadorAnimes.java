@@ -1,5 +1,8 @@
 package GerenciadorAnimes;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,10 +19,10 @@ public class GerenciadorAnimes implements AnimesRepository {
     }
 
     @Override
-    public boolean adicionarAnimes(Animes novoAnime) {
+    public boolean adicionarAnimes(Animes novoAnime) throws AnimeJaCadastradoException {
         for(Animes a : animes){
             if(a.equals(novoAnime)){
-                return false;
+                throw new AnimeJaCadastradoException("Erro! O anime " + a.getNome() + " já foi cadastrado.");
             }
         }
         animes.add(novoAnime);
@@ -38,7 +41,7 @@ public class GerenciadorAnimes implements AnimesRepository {
     }
 
     @Override
-    public List<String> animesGenero(String generoAnime) throws AnimeNEncontrado {
+    public List<String> animesGenero(String generoAnime) throws AnimeNEncontradoException {
         List<String> animesgenero = new ArrayList<>();
         for(Animes a : animes){
             if(a.getGenero().equalsIgnoreCase(generoAnime)){
@@ -46,7 +49,7 @@ public class GerenciadorAnimes implements AnimesRepository {
             }
         }
         if(animesgenero.size() == 0){
-            throw new AnimeNEncontrado(mensagem);
+            throw new AnimeNEncontradoException(mensagem);
         }
         return animesgenero;
     }
@@ -64,28 +67,43 @@ public class GerenciadorAnimes implements AnimesRepository {
     }
 
     @Override
-    public boolean removerAnime(String nomeAnime) throws AnimeNEncontrado {
+    public boolean removerAnime(String nomeAnime) throws AnimeNEncontradoException {
         for(Animes a : animes){
             if(a.getNome().equalsIgnoreCase(nomeAnime)){
                 animes.remove(a);
                 return true;
             }
         }
-        throw new AnimeNEncontrado(mensagem);
+        throw new AnimeNEncontradoException(mensagem);
     }
 
     @Override
-    public String pesquisarAnime(String nomeAnime) throws AnimeNEncontrado {
+    public String pesquisarAnime(String nomeAnime) throws AnimeNEncontradoException {
         for(Animes a : animes){
             if(a.getNome().equalsIgnoreCase(nomeAnime)){
                 return a.toString();
             }
         }
-        throw new AnimeNEncontrado(mensagem);
+        throw new AnimeNEncontradoException(mensagem);
     }
 
     @Override
     public List<Animes> TodosAnimes() {
         return animes;
     }
+
+    public String salvar(){
+        try{
+            FileWriter fw = new FileWriter("Animes.txt");
+            PrintWriter pw = new PrintWriter(fw);
+            pw.println(animes);
+            pw.flush();
+            pw.close();
+            fw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }

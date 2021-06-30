@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Animes> Lista_Animes = new ArrayList<>();
         GerenciadorAnimes gerenciadorAnimes = new GerenciadorAnimes();
         Scanner input = new Scanner(System.in);
         System.out.println("╔══╗░░░░░░░╔╗░░╔╗░░░░░╔╗░░╔╗\n" +
@@ -95,7 +94,12 @@ public class Main {
                     System.out.println("Digite a quantidade de episódios: ");
                     Integer qtd_ep = Integer.parseInt(input.nextLine());
                     Animes animes = new Animes(nome, genero, cla_eta, qtd_ep);
-                    gerenciadorAnimes.adicionarAnimes(animes);
+                    try{
+                        gerenciadorAnimes.adicionarAnimes(animes);
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+
                     break;
                 case 1:
                     System.out.println("Quer remover qual anime: ");
@@ -104,7 +108,7 @@ public class Main {
                         gerenciadorAnimes.removerAnime(nome_do_anime_remover);
                         System.out.println("Anime removido!");
                     } catch (Exception e) {
-                        System.err.println(e.getMessage());
+                        e.printStackTrace();
                     }
 
                     break;
@@ -114,7 +118,7 @@ public class Main {
                     try{
                         System.out.println(gerenciadorAnimes.pesquisarAnime(nome_do_anime));
                     } catch (Exception e){
-                        System.err.println(e.getMessage());
+                        e.printStackTrace();
                     }
 
                     break;
@@ -127,7 +131,7 @@ public class Main {
                     try{
                         System.out.println(gerenciadorAnimes.animesGenero(genero_anime));
                     }catch (Exception e){
-                        System.err.println(e.getMessage());
+                        e.printStackTrace();
                     }
                     break;
                 case 5:
@@ -138,9 +142,11 @@ public class Main {
                     break;
                 default:
                     System.err.println("Não tem essa opção");
+                    break;
             }
             System.out.println("Digite uma nova opção: ");
              opcao = Integer.parseInt(input.nextLine());
+             gerenciadorAnimes.salvar();
         }
         System.out.println("╔═╗╔═╗░░░░╔╗░░░░╔═══╦╗░░░░░░░░░░░░╔╗░░╔╗\n" +
                 "║║╚╝║║░░░╔╝╚╗░░░║╔═╗║║░░░░░░░░░░░░║║░░║║\n" +
