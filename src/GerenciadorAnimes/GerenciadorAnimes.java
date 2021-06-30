@@ -88,7 +88,10 @@ public class GerenciadorAnimes implements AnimesRepository {
     }
 
     @Override
-    public List<Animes> TodosAnimes() {
+    public List<Animes> TodosAnimes() throws ListaVaziaException {
+        if(animes.size() == 0){
+            throw new ListaVaziaException("Não tem animes cadastrados");
+        }
         return animes;
     }
 

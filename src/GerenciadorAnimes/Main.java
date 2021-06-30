@@ -138,7 +138,12 @@ public class Main {
                     System.out.println("Esses são os animes com menos de 20 episódios: "+gerenciadorAnimes.animesMenos20episodios());
                     break;
                 case 6:
-                    System.out.println(gerenciadorAnimes.TodosAnimes());
+                    try{
+                        System.out.println(gerenciadorAnimes.TodosAnimes());
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+
                     break;
                 default:
                     System.err.println("Não tem essa opção");

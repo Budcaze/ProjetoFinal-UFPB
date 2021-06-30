@@ -9,5 +9,5 @@ public interface AnimesRepository {
     List<String> animesMaior18();
     boolean removerAnime(String nomeAnime) throws AnimeNEncontradoException;
     String pesquisarAnime(String nomeAnime) throws AnimeNEncontradoException;
-    List<Animes> TodosAnimes();
+    List<Animes> TodosAnimes() throws ListaVaziaException;
 }
