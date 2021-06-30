@@ -81,6 +81,7 @@ public class Main {
                 "[6] Para listar todos os animes cadastrados\n" +
                 "[7] Para sair do programa\n" +
                 "Digite sua opção: ");
+        gerenciadorAnimes.retornar();
         Integer opcao = Integer.parseInt(input.nextLine());
         while (opcao != 7) {
             switch (opcao) {
@@ -149,11 +150,12 @@ public class Main {
                     System.err.println("Não tem essa opção");
                     break;
             }
-            gerenciadorAnimes.salvar();
+
             System.out.println("Digite uma nova opção: ");
              opcao = Integer.parseInt(input.nextLine());
 
         }
+        gerenciadorAnimes.salvar();
         System.out.println("╔═╗╔═╗░░░░╔╗░░░░╔═══╦╗░░░░░░░░░░░░╔╗░░╔╗\n" +
                 "║║╚╝║║░░░╔╝╚╗░░░║╔═╗║║░░░░░░░░░░░░║║░░║║\n" +
                 "║╔╗╔╗╠╗╔╦╬╗╔╬══╗║║░║║╚═╦═╦╦══╦══╦═╝╠══╣║\n" +

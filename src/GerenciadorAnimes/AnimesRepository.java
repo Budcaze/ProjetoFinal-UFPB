@@ -11,4 +11,5 @@ public interface AnimesRepository {
     String pesquisarAnime(String nomeAnime) throws AnimeNEncontradoException;
     List<Animes> TodosAnimes() throws ListaVaziaException;
     String salvar();
+    List<String> retornar();
 }

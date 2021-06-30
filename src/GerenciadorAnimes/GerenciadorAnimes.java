@@ -1,13 +1,12 @@
 package GerenciadorAnimes;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class GerenciadorAnimes implements AnimesRepository {
     private List<Animes> animes;
+    private List<String> animesTexto;
    private String mensagem = "Anime não Encontrado!";
 
     public GerenciadorAnimes (){
@@ -105,6 +104,28 @@ public class GerenciadorAnimes implements AnimesRepository {
             fw.close();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public List<String> retornar() {
+        try {
+            FileReader fr = new FileReader("Animes.txt");
+            BufferedReader bf = new BufferedReader(fr);
+            while(true){
+                String linha = bf.readLine();
+                animesTexto.add(linha);
+                if(linha == null){
+                    break;
+                }
+                fr.close();
+                bf.close();
+                return animesTexto;
+            }
+
+        }catch (IOException e){
+            e.getMessage();
         }
         return null;
     }

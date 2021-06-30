@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96f23f16-9916-4b04-b16c-9c04d221fc80" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Animes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Animes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GerenciadorAnimes/Animes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GerenciadorAnimes/Animes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoFinal-UFPB/GerenciadorAnimes/AnimesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoFinal-UFPB/GerenciadorAnimes/AnimesRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoFinal-UFPB/GerenciadorAnimes/GerenciadorAnimes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoFinal-UFPB/GerenciadorAnimes/GerenciadorAnimes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoFinal-UFPB/GerenciadorAnimes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoFinal-UFPB/GerenciadorAnimes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GerenciadorAnimes/AnimesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GerenciadorAnimes/AnimesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GerenciadorAnimes/GerenciadorAnimes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GerenciadorAnimes/GerenciadorAnimes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GerenciadorAnimes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GerenciadorAnimes/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +24,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1uVbrl5FhW65A9ZR1S6rtR7Ibfy" />
   <component name="ProjectViewState">
@@ -82,7 +94,7 @@
       <workItem from="1624936768147" duration="889000" />
       <workItem from="1624974277639" duration="6144000" />
       <workItem from="1625018508756" duration="1371000" />
-      <workItem from="1625085787225" duration="2247000" />
+      <workItem from="1625085787225" duration="4380000" />
     </task>
     <servers />
   </component>
