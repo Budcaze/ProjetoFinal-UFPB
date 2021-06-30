@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         GerenciadorAnimes gerenciadorAnimes = new GerenciadorAnimes();
         Scanner input = new Scanner(System.in);
-        List<String> recuperar =  new ArrayList<>(gerenciadorAnimes.retornar("Animes.txt"));
+        List<String> recuperar =  new ArrayList<>();
         System.out.println("╔══╗░░░░░░░╔╗░░╔╗░░░░░╔╗░░╔╗\n" +
                 "║╔╗║░░░░░░░║╚╗╔╝║░░░░░║║░░║║\n" +
                 "║╚╝╚╦══╦╗╔╗╚╗║║╔╬╦═╗╔═╝╠══╣║\n" +
@@ -85,7 +85,7 @@ public class Main {
                 "[7] Para sair do programa\n" +
                 "Digite sua opção: ");
 
-        System.out.println(recuperar.toString().split(","));
+        recuperar.add((gerenciadorAnimes.retornar("Animes.txt")));
         Integer opcao = Integer.parseInt(input.nextLine());
         while (opcao != 7) {
             switch (opcao) {

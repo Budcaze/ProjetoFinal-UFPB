@@ -98,11 +98,11 @@ public class GerenciadorAnimes implements AnimesRepository {
         try{
             FileWriter fw = new FileWriter("Animes.txt");
             PrintWriter pw = new PrintWriter(fw);
-            for(Animes a : animes){
-                pw.println(a.getNome() + "," + a.getGenero()  + "," +
-                a.getClassificacao_etaria() + "," + a.getQtd_episodios());
-            }
-
+            pw.println(animes);
+//            for(Animes a : animes){
+//                pw.println(a.getNome() + "," + a.getGenero()  + "," +
+//                a.getClassificacao_etaria() + "," + a.getQtd_episodios());
+//            }
             pw.flush();
             pw.close();
             fw.close();
