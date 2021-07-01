@@ -146,7 +146,6 @@ public class GerenciadorAnimes implements AnimesRepository {
 
     @Override
     public List<Animes> retornarAnimes() throws IOException {
-
         List<String> textoAnime = this.retornar("Animes.txt");
         for(String s : textoAnime){
             String[] dadoslinha = s.split("#");
