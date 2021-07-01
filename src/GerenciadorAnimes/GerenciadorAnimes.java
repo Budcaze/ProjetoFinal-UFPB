@@ -95,17 +95,23 @@ public class GerenciadorAnimes implements AnimesRepository {
     }
     @Override
     public String salvar(){
-        try{
-            FileWriter fw = new FileWriter("Animes.txt");
-            PrintWriter pw = new PrintWriter(fw);
-            pw.println(animes);
+        try(PrintWriter pw = new PrintWriter(new FileWriter("Animes.txt", false))){
+
+
+           // pw.println(animes);
+            for(Animes a : animes){
+                pw.println(a.getNome() + "#" + a.getGenero()  + "#" +
+                a.getClassificacao_etaria() + "#" + a.getQtd_episodios());
+            }
 //            for(Animes a : animes){
-//                pw.println(a.getNome() + "," + a.getGenero()  + "," +
-//                a.getClassificacao_etaria() + "," + a.getQtd_episodios());
+//                var b = new String[]{a.getNome() + a.getGenero() + a.getClassificacao_etaria() + a.getQtd_episodios()};
+//                for(int c = 0; c < b.length; c++){
+//                    pw.println(b[c]);
+//                }
 //            }
             pw.flush();
-            pw.close();
-            fw.close();
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -114,15 +120,15 @@ public class GerenciadorAnimes implements AnimesRepository {
 
     @Override
     public List<String> retornar(String nomeArquivo) throws IOException {
-            List<String> linhasLidas = new ArrayList<>();
+            List<String> linhaAnimes = new ArrayList<>();
             BufferedReader leitor = null;
             try {
                 leitor = new BufferedReader(new FileReader(nomeArquivo));
-                String linha = null;
+                String linha;
                 do {
                     linha = leitor.readLine();
                     if (linha!=null) {
-                        linhasLidas.add(linha);
+                        linhaAnimes.add(linha);
                     }
                 } while(linha!=null);
 
@@ -135,7 +141,20 @@ public class GerenciadorAnimes implements AnimesRepository {
                     leitor.close();
                 }
             }
-            return linhasLidas;
+            return linhaAnimes;
         }
+
+    @Override
+    public List<Animes> retornarAnimes() throws IOException {
+
+        List<String> textoAnime = this.retornar("Animes.txt");
+        for(String s : textoAnime){
+            String[] dadoslinha = s.split("#");
+            Animes a = new Animes(dadoslinha[0], dadoslinha[1], Integer.parseInt(dadoslinha[2]), Integer.parseInt(dadoslinha[3]));
+            animes.add(a);
+        }
+
+        return animes;
+    }
 
 }

@@ -1,6 +1,5 @@
 package GerenciadorAnimes;
 
-import javax.sound.midi.Soundbank;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +8,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws IOException {
         GerenciadorAnimes gerenciadorAnimes = new GerenciadorAnimes();
+        gerenciadorAnimes.retornarAnimes();
         Scanner input = new Scanner(System.in);
 
         System.out.println("╔══╗░░░░░░░╔╗░░╔╗░░░░░╔╗░░╔╗\n" +
@@ -86,6 +86,8 @@ public class Main {
                 "Digite sua opção: ");
 
 
+
+
         Integer opcao = Integer.parseInt(input.nextLine());
         while (opcao != 7) {
             switch (opcao) {
@@ -104,7 +106,6 @@ public class Main {
                     }catch (Exception e){
                         e.printStackTrace();
                     }
-
                     break;
                 case 1:
                     System.out.println("Quer remover qual anime: ");
@@ -115,7 +116,6 @@ public class Main {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-
                     break;
                 case 2:
                     System.out.println("Digite o nome do anime que você quer procurar: ");
@@ -125,7 +125,6 @@ public class Main {
                     } catch (Exception e){
                         e.printStackTrace();
                     }
-
                     break;
                 case 3:
                     System.out.println("Esses são os animes para maiores de 18 anos: "+gerenciadorAnimes.animesMaior18());
@@ -148,7 +147,6 @@ public class Main {
                     }catch (Exception e){
                         e.printStackTrace();
                     }
-
                     break;
                 default:
                     System.err.println("Não tem essa opção");
@@ -157,7 +155,6 @@ public class Main {
 
             System.out.println("Digite uma nova opção: ");
              opcao = Integer.parseInt(input.nextLine());
-
         }
         gerenciadorAnimes.salvar();
         System.out.println("╔═╗╔═╗░░░░╔╗░░░░╔═══╦╗░░░░░░░░░░░░╔╗░░╔╗\n" +
@@ -180,12 +177,6 @@ public class Main {
                 "⠄⠘⣿⣿⣿⣿⣿⣿⣿⣿⠄⣴⣿⣶⣄⠄⣴⣶⠄⢀⣾⣿⣿⣿⣿⣿⣿⠃⠄\n" +
                 "⠄⠄⠈⠻⣿⣿⣿⣿⣿⣿⡄⢻⣿⣿⣿⠄⣿⣿⡀⣾⣿⣿⣿⣿⣛⠛⠁⠄⠄");
 
-//        Animes animes2 = new Animes("Balala", "Hentai", 18, 10);
-//        Animes animes = new Animes("Boku no pico", "Hentai", 18, 3);
-//        Animes animes2 = new Animes("Pokemon", "Acao", 10, 800);
-//        gerenciadorAnimes.adicionarAnimes(animes);
-//        gerenciadorAnimes.adicionarAnimes(animes2);
-//        System.out.println(gerenciadorAnimes.removerAnime("Boku no pico"));
-//        System.out.println(gerenciadorAnimes.TodosAnimes());
+
     }
 }

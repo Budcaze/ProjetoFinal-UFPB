@@ -13,4 +13,5 @@ public interface AnimesRepository {
     List<Animes> TodosAnimes() throws ListaVaziaException;
     String salvar();
     List<String> retornar(String nomeArquivo) throws IOException;
+    List<Animes> retornarAnimes() throws IOException;
 }
