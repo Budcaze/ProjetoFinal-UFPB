@@ -6,7 +6,6 @@ import java.util.List;
 
 public class GerenciadorAnimes implements AnimesRepository {
     private List<Animes> animes;
-    private List<String> animesTexto;
    private String mensagem = "Anime não Encontrado!";
 
     public GerenciadorAnimes (){
@@ -29,12 +28,15 @@ public class GerenciadorAnimes implements AnimesRepository {
     }
 
     @Override
-    public List<String> animesMenos20episodios() {
+    public List<String> animesMenos20episodios() throws ListaVaziaException{
         List<String> animes20 = new ArrayList<>();
         for(Animes a : animes){
             if(a.getQtd_episodios() < 20){
                 animes20.add(a.getNome());
             }
+        }
+        if(animes20.size() == 0){
+            throw new ListaVaziaException("Não existe anime com menos de 20 ep");
         }
         return animes20;
     }
@@ -54,12 +56,15 @@ public class GerenciadorAnimes implements AnimesRepository {
     }
 
     @Override
-    public List<String> animesMaior18() {
+    public List<String> animesMaior18() throws ListaVaziaException{
         List<String> animesmais18 = new ArrayList<>();
         for(Animes a : animes){
             if(a.getClassificacao_etaria() >= 18){
                 animesmais18.add(a.getNome());
             }
+        }
+        if(animesmais18.size() == 0){
+            throw new ListaVaziaException("Não tem animes para maiores de 18 anos");
         }
 
         return animesmais18;
@@ -96,22 +101,11 @@ public class GerenciadorAnimes implements AnimesRepository {
     @Override
     public String salvar(){
         try(PrintWriter pw = new PrintWriter(new FileWriter("Animes.txt", false))){
-
-
-           // pw.println(animes);
             for(Animes a : animes){
                 pw.println(a.getNome() + "#" + a.getGenero()  + "#" +
                 a.getClassificacao_etaria() + "#" + a.getQtd_episodios());
             }
-//            for(Animes a : animes){
-//                var b = new String[]{a.getNome() + a.getGenero() + a.getClassificacao_etaria() + a.getQtd_episodios()};
-//                for(int c = 0; c < b.length; c++){
-//                    pw.println(b[c]);
-//                }
-//            }
             pw.flush();
-
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -147,12 +141,14 @@ public class GerenciadorAnimes implements AnimesRepository {
     @Override
     public List<Animes> retornarAnimes() throws IOException {
         List<String> textoAnime = this.retornar("Animes.txt");
-        for(String s : textoAnime){
-            String[] dadoslinha = s.split("#");
-            Animes a = new Animes(dadoslinha[0], dadoslinha[1], Integer.parseInt(dadoslinha[2]), Integer.parseInt(dadoslinha[3]));
-            animes.add(a);
+        try {
+            for(String s : textoAnime){
+                String[] dadoslinha = s.split("#");
+                Animes a = new Animes(dadoslinha[0], dadoslinha[1], Integer.parseInt(dadoslinha[2]), Integer.parseInt(dadoslinha[3]));
+                animes.add(a);
+            }
+        }catch (Exception e){
         }
-
         return animes;
     }
 

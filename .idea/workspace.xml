@@ -4,6 +4,9 @@
     <list default="true" id="96f23f16-9916-4b04-b16c-9c04d221fc80" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Animes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Animes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoFinal-UFPB/GerenciadorAnimes/AnimesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoFinal-UFPB/GerenciadorAnimes/AnimesRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoFinal-UFPB/GerenciadorAnimes/GerenciadorAnimes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoFinal-UFPB/GerenciadorAnimes/GerenciadorAnimes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoFinal-UFPB/GerenciadorAnimes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoFinal-UFPB/GerenciadorAnimes/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GerenciadorAnimes/AnimesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GerenciadorAnimes/AnimesRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GerenciadorAnimes/GerenciadorAnimes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GerenciadorAnimes/GerenciadorAnimes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GerenciadorAnimes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GerenciadorAnimes/Main.java" afterDir="false" />
@@ -42,9 +45,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Estudos_De_Java/AlgaWorks" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GerenciadorAnimes.Main" />
       <module name="ProjetoFinal-UFPB" />
@@ -58,13 +61,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="main2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GerenciadorAnimes.main2" />
+      <module name="ProjetoFinal-UFPB" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GerenciadorAnimes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -72,6 +77,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.main2" />
       </list>
     </recent_temporary>
   </component>
@@ -91,7 +97,16 @@
       <workItem from="1624974277639" duration="6144000" />
       <workItem from="1625018508756" duration="1371000" />
       <workItem from="1625085787225" duration="10872000" />
-      <workItem from="1625162178531" duration="8506000" />
+      <workItem from="1625162178531" duration="8756000" />
+      <workItem from="1625171108309" duration="900000" />
+      <workItem from="1625191357244" duration="2231000" />
+      <workItem from="1625255980904" duration="5844000" />
+      <workItem from="1625290712094" duration="354000" />
+      <workItem from="1625341061269" duration="427000" />
+      <workItem from="1625367084447" duration="972000" />
+      <workItem from="1625460379124" duration="690000" />
+      <workItem from="1625512987355" duration="5999000" />
+      <workItem from="1625607402755" duration="1875000" />
     </task>
     <servers />
   </component>

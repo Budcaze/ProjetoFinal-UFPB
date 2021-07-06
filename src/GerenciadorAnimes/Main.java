@@ -1,8 +1,7 @@
 package GerenciadorAnimes;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Scanner;
 
 public class Main {
@@ -127,7 +126,12 @@ public class Main {
                     }
                     break;
                 case 3:
-                    System.out.println("Esses são os animes para maiores de 18 anos: "+gerenciadorAnimes.animesMaior18());
+                    try{
+                        System.out.println("Esses são os animes para maiores de 18 anos: "+gerenciadorAnimes.animesMaior18());
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+
                     break;
                 case 4:
                     System.out.println("Digite o gênero do anime que você quer procurar: ");
@@ -139,7 +143,12 @@ public class Main {
                     }
                     break;
                 case 5:
-                    System.out.println("Esses são os animes com menos de 20 episódios: "+gerenciadorAnimes.animesMenos20episodios());
+                    try{
+                        System.out.println("Esses são os animes com menos de 20 episódios: "+gerenciadorAnimes.animesMenos20episodios());
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+
                     break;
                 case 6:
                     try{
